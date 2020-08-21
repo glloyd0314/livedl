@@ -7,17 +7,21 @@ https://himananiito.hatenablog.jp/entry/livedl
 
 
 ## Linux(Ubuntu)でのビルド方法
+Check the system is `Ubuntu 16 or 18`
+
+## Installation of ffmpeg
 ```
-cat /etc/os-release
-NAME="Ubuntu"
-VERSION="16.04.2 LTS (Xenial Xerus)"
+sudo add-apt-repository ppa:jonathonf/ffmpeg-4
+sudo apt update
+sudo apt install ffmpeg
 ```
 
-### Go実行環境のインストール　（無い場合）
+
+### Go実行環境のインストール　（無い場合）(AS Go 1.15 is required otherwise the installation of gin would go wrong)
 ```
-wget https://dl.google.com/go/go1.10.3.linux-amd64.tar.gz
+wget https://golang.org/dl/go1.15.linux-amd64.tar.gz
 sudo rm -rf /usr/local/go
-sudo tar -C /usr/local -xzf go1.10.3.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.15.linux-amd64.tar.gz
 export PATH=$PATH:/usr/local/go/bin
 # 必要であれば、bashrcなどにPATHを追加する
 ```
@@ -42,7 +46,7 @@ go get github.com/gin-gonic/gin
 
 ### livedlのソースを取得
 ```
-git clone https://github.com/himananiito/livedl.git
+git clone https://github.com/glloyd0314/livedl.git
 ```
 
 ### livedlのコンパイル
@@ -58,9 +62,11 @@ $ git tag
 20180513.6
 20180514.7
 ...
-20180729.21
-20180807.22
-$ git checkout 20180729.21 （選んだバージョン）
+20181008.33
+20181107.34
+20181215.35
+v2alpha
+$ git checkout 20181107.34 （選んだバージョン）
 ```
 
 #### (オプション)最新のコードをビルドする場合
@@ -79,7 +85,7 @@ go build src/livedl.go
 
 ```
 ./livedl -h
-livedl (20180807.22-linux)
+livedl (20181215.35-linux-amd64)
 ```
 
 ## Windows(32bit及び64bit上での32bit向け)コンパイル方法
@@ -116,7 +122,7 @@ go build -o livedl.x86.exe src/livedl.go
 
 ### livedlのソースを取得
 ```
-git clone https://github.com/himananiito/livedl.git
+git clone https://github.com/glloyd0314/livedl.git
 cd livedl
 git checkout master # Or another version that supports docker (contains Dockerfile)
 ```
