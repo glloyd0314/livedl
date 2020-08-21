@@ -101,6 +101,12 @@ From 2nd time, record directly with
 ./livedl lv321234567
 `
 
+Or with more parameters like
+`
+./livedl -nico-login "example@example.com,password" -nico-format "rec/?UNAME?/?DAY8?_?TIME4?_?PID?_?TITLE?_?UNAME?(?UID?)_?CID?(?CNAME?)" -nico-fast-ts=on -nico-auto-convert=on -nico-skip-hb=on -nico-force-reservation=on lv321234567
+`
+
+
 
 For more please check the website of https://himananiito.hatenablog.jp/entry/livedl (Japanese)
 
