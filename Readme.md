@@ -91,11 +91,12 @@ livedl (20181215.35-linux-amd64)
 ```
 
 ### Way to use it
-First to login nico and record 
+First to login nico and record with
 `
 ./livedl -nico-login 'example@example.com,password' lv321234567
 `
-From 2nd time, record directly
+
+From 2nd time, record directly with
 `
 ./livedl lv321234567
 `
