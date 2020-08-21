@@ -91,7 +91,17 @@ livedl (20181215.35-linux-amd64)
 ```
 
 ### Way to use it
-Check the website of https://himananiito.hatenablog.jp/entry/livedl (Japanese)
+First to login nico and record 
+`
+./livedl -nico-login 'example@example.com,password' lv321234567
+`
+From 2nd time, record directly
+`
+./livedl lv321234567
+`
+
+
+For more please check the website of https://himananiito.hatenablog.jp/entry/livedl (Japanese)
 
 
 ## Windows(32bit及び64bit上での32bit向け)コンパイル方法
