@@ -10,6 +10,19 @@ sudo apt update
 sudo apt install ffmpeg
 ```
 
+### Installation of streamlink
+```
+sudo add-apt-repository ppa:nilarimogard/webupd8
+sudo apt update
+sudo apt install streamlink
+```
+
+### Installation of youtube-dl
+```
+sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+sudo chmod a+rx /usr/local/bin/youtube-dl
+```
+
 ### Installation of go
 AS Go 1.15 is required otherwise the installation of gin would go wrong.
 ```
