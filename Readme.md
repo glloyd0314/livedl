@@ -1,23 +1,17 @@
 # livedl
-新配信(HTML5)に対応したニコ生録画ツール。ニコ生以外のサイトにも対応予定
+A tool which has could record niconico's new HTML5 live streaming. It could also record live streaming from Twitcasting and YouTube with `streamlink` and `youtube-dl`.
 
-## 使い方
-https://himananiito.hatenablog.jp/entry/livedl
-を参照
+## Build in Linux, e.g. Ubuntu
 
-
-## Linux(Ubuntu)でのビルド方法
-Check the system is `Ubuntu 16 or 18`
-
-## Installation of ffmpeg
+### Installation of ffmpeg
 ```
 sudo add-apt-repository ppa:jonathonf/ffmpeg-4
 sudo apt update
 sudo apt install ffmpeg
 ```
 
-
-### Go実行環境のインストール　（無い場合）(AS Go 1.15 is required otherwise the installation of gin would go wrong)
+### Installation of go
+AS Go 1.15 is required otherwise the installation of gin would go wrong.
 ```
 wget https://golang.org/dl/go1.15.linux-amd64.tar.gz
 sudo rm -rf /usr/local/go
@@ -26,17 +20,17 @@ export PATH=$PATH:/usr/local/go/bin
 # 必要であれば、bashrcなどにPATHを追加する
 ```
 
-### gitをインストール　（無い場合）
+### Installation of git
 ```
 sudo apt-get install git
 ```
 
-### gccなどのビルドツールをインストール　（無い場合）
+### Installation of compiler tools like gcc
 ```
 sudo apt-get install build-essential
 ```
 
-### 必要なgoのモジュールをインストール
+### Installation of essential modules in go
 ```
 go get github.com/gorilla/websocket
 go get golang.org/x/crypto/sha3
@@ -44,19 +38,17 @@ go get github.com/mattn/go-sqlite3
 go get github.com/gin-gonic/gin
 ```
 
-### livedlのソースを取得
+### Get the source of livedl
 ```
 git clone https://github.com/glloyd0314/livedl.git
 ```
 
-### livedlのコンパイル
-
-ディレクトリを移動
+### Compile livedl
 ```
 cd livedl
 ```
 
-#### (オプション)特定のバージョンを選択する場合
+#### To select the version of livedl (Optional)
 ```
 $ git tag
 20180513.6
@@ -66,27 +58,28 @@ $ git tag
 20181107.34
 20181215.35
 v2alpha
-$ git checkout 20181107.34 （選んだバージョン）
+$ git checkout 20181107.34 (The version you select)
 ```
 
-#### (オプション)最新のコードをビルドする場合
+#### To select the latest version of livedl (Optional)
 ```
 git checkout master
 ```
 
-ビルドする
+Now build it.
 ```
 go build src/livedl.go
 ```
-もし、cannot find package "github.com/gin-gonic/gin" in any of:
 
-など出る場合は、
-`go get github.com/gin-gonic/gin` (適宜読み替える)したのち`go build src/livedl.go`を再実行する
-
+Check the version of livedl
 ```
 ./livedl -h
 livedl (20181215.35-linux-amd64)
 ```
+
+### Way to use it
+Check the website of https://himananiito.hatenablog.jp/entry/livedl (Japanese)
+
 
 ## Windows(32bit及び64bit上での32bit向け)コンパイル方法
 
@@ -140,5 +133,3 @@ docker build -t <your_image_tag> .
 ```
 docker run -it --rm -v ~/livedl:/livedl <your_image_tag> livedl --no-chdir <other_parameters> ...
 ```
-
-以上
