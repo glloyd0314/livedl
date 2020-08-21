@@ -1,5 +1,5 @@
 # livedl
-A tool which has could record niconico's new HTML5 live streaming. It could also record live streaming from Twitcasting and YouTube with `streamlink` and `youtube-dl`.
+A tool which could record niconico's new HTML5 live streaming. It could also record live streaming from Twitcasting and YouTube with `streamlink` and `youtube-dl`.
 
 ## Build in Linux, e.g. Ubuntu
 
