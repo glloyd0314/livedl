@@ -1,8 +1,8 @@
 rm livedl.exe
-go run updatebuildno.go
+go run updatebuildno/updatebuildno.go
 go build src/livedl.go
 .\build-386.ps1
-go build livedl-logger.go
+go build livedl-logger/livedl-logger.go
 
 # hide local path
 perl replacelocal.pl
