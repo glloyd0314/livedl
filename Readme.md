@@ -31,7 +31,19 @@ sudo rm -rf /usr/local/go
 sudo tar -C /usr/local -xzf go1.15.linux-amd64.tar.gz
 export PATH=$PATH:/usr/local/go/bin
 ```
-If necessary, add `PATH` in bashrc.
+If necessary, add this part at the end of bashrc.
+```
+nano ~/.bashrc
+export GOROOT=/usr/local/go
+export GOBIN=$GOROOT/bin
+export PATH=$PATH:$GOBIN
+export GOPATH=/home/GOPATH
+```
+
+Reload the `bashrc`.
+```
+source ~/.bashrc
+```
 
 ### Installation of git
 ```
@@ -71,6 +83,7 @@ $ git tag
 20181107.34
 20181215.35
 v2alpha
+20181215.35+
 $ git checkout 20181107.34 (The version you select)
 ```
 
