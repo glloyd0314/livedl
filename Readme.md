@@ -45,11 +45,6 @@ Reload the `bashrc`.
 source ~/.bashrc
 ```
 
-### Installation of git
-```
-sudo apt-get install git
-```
-
 ### Installation of compiler tools like gcc
 ```
 sudo apt-get install build-essential
@@ -63,12 +58,18 @@ go get github.com/mattn/go-sqlite3
 go get github.com/gin-gonic/gin
 ```
 
+### Installation of git
+```
+sudo apt-get install git
+```
+
 ### Get the source of livedl
 ```
 git clone https://github.com/glloyd0314/livedl.git
 ```
 
 ### Compile livedl
+Enter the directory of livedl
 ```
 cd livedl
 ```
@@ -116,7 +117,7 @@ From 2nd time, record directly with
 
 Or with more parameters like
 ```
-./livedl -nico-login "example@example.com,password" -nico-format "rec/?UNAME?/?DAY8?_?TIME4?_?PID?_?TITLE?_?UNAME?(?UID?)_?CID?(?CNAME?)" -nico-fast-ts=on -nico-auto-convert=on -nico-skip-hb=on -nico-force-reservation=on lv321234567
+./livedl -nico-login "example@example.com,password" -nico-login-only=on -nico-format "rec/?UNAME?/?DAY8?_?TIME4?_?PID?_?TITLE?_?UNAME?(?UID?)_?CID?(?CNAME?)" -nico-fast-ts=on -nico-auto-convert=on -nico-skip-hb=on -nico-force-reservation=on lv321234567
 ```
 
 
